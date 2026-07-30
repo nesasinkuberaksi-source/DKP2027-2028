@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DKP 2027 | Pangkalan SMP Negeri 1 Sindang</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f7fa;
+color:#222;
+overflow-x:hidden;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.70)),
+url('SAMPULL.jpeg') no-repeat center center/cover;
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:60px;
+font-weight:900;
+color:white;
+text-shadow:0 5px 20px rgba(0,0,0,.5);
+}
+
+.hero-content h2{
+color:#ffd700;
+font-size:26px;
+margin-top:10px;
+}
+
+.hero-content p{
+color:white;
+max-width:700px;
+margin:20px auto;
+line-height:1.8;
+}
+
+.btn{
+display:inline-block;
+padding:14px 30px;
+margin:10px;
+background:#ffd700;
+color:#000;
+font-weight:700;
+border-radius:40px;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+/* MENU */
+nav{
+position:sticky;
+top:0;
+z-index:999;
+background:#0d47a1;
+padding:15px;
+text-align:center;
+box-shadow:0 3px 15px rgba(0,0,0,.2);
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:600;
+}
+
+section{
+padding:80px 8%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+color:#0d47a1;
+margin-bottom:50px;
+font-weight:800;
+}
+
+/* PEMBINA */
+.pembina{
+display:flex;
+flex-wrap:wrap;
+gap:40px;
+align-items:center;
+justify-content:center;
+}
+
+.pembina img{
+width:280px;
+height:350px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.bio{
+max-width:600px;
+}
+
+.bio h3{
+font-size:35px;
+color:#0d47a1;
+margin-bottom:10px;
+}
+
+.bio p{
+line-height:1.8;
+}
+/* PRATAMA */
+.pratama{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+margin-top:20px;
+}
+
+.pratama-card{
+background:#fff;
+padding:20px;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+text-align:center;
+max-width:320px;
+transition:.4s;
+}
+
+.pratama-card:hover{
+transform:translateY(-8px);
+}
+
+.pratama-card img{
+width:260px;
+height:320px;
+object-fit:cover;
+border-radius:15px;
+border:5px solid #0d47a1;
+margin-bottom:15px;
+}
+
+.pratama-card h3{
+color:#0d47a1;
+font-size:26px;
+margin-bottom:8px;
+}
+
+.pratama-card p{
+line-height:1.7;
+}
+/* ANGGOTA */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+.title{
+    text-align:center;
+    font-size:38px;
+    color:#0d47a1;
+    margin-bottom:40px;
+    font-weight:800;
+}
+
+.pembatas{
+    margin:80px auto;
+    width:80%;
+    border-top:4px dashed #0d47a1;
+    position:relative;
+}
+
+.pembatas::after{
+    content:"⚜️";
+    position:absolute;
+    top:-18px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#f5f7fa;
+    padding:0 18px;
+    font-size:28px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+.card img{
+width:200px;
+height:200px;
+object-fit:cover;
+border-radius:12px;
+border:4px solid #0d47a1;
+margin-bottom:15px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+/* MATERI */
+.materi{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.materi a{
+background:white;
+padding:25px;
+border-radius:15px;
+text-decoration:none;
+color:#0d47a1;
+font-weight:700;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.materi a:hover{
+background:#0d47a1;
+color:white;
+}
+
+/* GALERI */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+.gallery-item{
+background:#fff;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+transition:.4s;
+}
+
+.gallery-item:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+.gallery-item img{
+width:100%;
+height:250px;
+object-fit:cover;
+display:block;
+transition:.4s;
+}
+
+.gallery-item:hover img{
+transform:scale(1.05);
+}
+
+.gallery-info{
+padding:18px;
+}
+
+.gallery-info h3{
+color:#0d47a1;
+font-size:20px;
+margin-bottom:10px;
+}
+
+.gallery-info p{
+color:#555;
+line-height:1.7;
+font-size:15px;
+}
+
+/* FOOTER */
+footer{
+background:#0d47a1;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+/* MUSIK */
+.music{
+    position:fixed;
+    top:12px;
+    right:12px;
+    z-index:9999;
+    background:rgba(255,255,255,.9);
+    padding:6px 8px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,.2);
+    backdrop-filter:blur(8px);
+}
+
+/* Kecilkan audio */
+.music audio{
+    width:180px;
+    height:32px;
+    display:block;
+}
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:35px;
+}
+
+.hero-content h2{
+font-size:18px;
+}
+
+.title{
+font-size:30px;
+}
+
+.pembina{
+flex-direction:column;
+}
+}
+.logo-dkp{
+text-align:center;
+margin-bottom:40px;
+}
+
+.logo-dkp img{
+width:250px;
+max-width:90%;
+filter:drop-shadow(0 10px 20px rgba(0,0,0,.2));
+animation:logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-10px);
+}
+}
+
+/* ================= RESPONSIVE HP ================= */
+/* ================= RESPONSIVE MOBILE ================= */
+@media screen and (max-width:768px){
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    overflow-x:hidden;
+    width:100%;
+    font-size:16px;
+}
+
+/* ================= HERO ================= */
+.hero{
+    min-height:100vh;
+    width:100%;
+    padding:90px 20px 50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    width:100%;
+    max-width:600px;
+    margin:auto;
+}
+
+.hero-content h1{
+    font-size:clamp(30px,8vw,42px);
+    line-height:1.15;
+    margin-bottom:12px;
+    font-weight:700;
+}
+
+.hero-content h2{
+    font-size:clamp(18px,4.8vw,24px);
+    margin-bottom:15px;
+    line-height:1.4;
+    font-weight:500;
+}
+
+.hero-content p{
+    font-size:16px;
+    line-height:1.8;
+    text-align:justify;
+    margin-bottom:25px;
+}
+
+/* Tombol */
+.hero-btn,
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    max-width:280px;
+    padding:14px 25px;
+    font-size:16px;
+    border-radius:50px;
+    margin:8px auto;
+}
+
+/* Gambar Hero */
+.hero img,
+.hero-image img{
+    width:100%;
+    max-width:320px;
+    height:auto;
+    display:block;
+    margin:25px auto 0;
+}
+
+/* Navbar */
+nav{
+    padding:12px 18px;
+}
+
+nav .logo{
+    font-size:22px;
+}
+
+nav ul{
+    width:100%;
+}
+
+/* Section */
+section{
+    padding:70px 20px;
+}
+
+.section-title{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.section-subtitle{
+    font-size:15px;
+    line-height:1.7;
+}
+
+/* Grid */
+.grid,
+.cards,
+.container-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+/* Card */
+.card{
+    padding:25px;
+    border-radius:18px;
+}
+
+/* Gallery */
+.gallery{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+.gallery img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+/* Footer */
+footer{
+    padding:30px 20px;
+    text-align:center;
+}
+
+footer p{
+    font-size:14px;
+    line-height:1.7;
+}
+
+}
+
+/* ================= EXTRA SMALL (HP KECIL) ================= */
+@media screen and (max-width:480px){
+
+.hero{
+    padding:80px 18px 40px;
+}
+
+.hero-content h1{
+    font-size:30px;
+}
+
+.hero-content h2{
+    font-size:18px;
+}
+
+.hero-content p{
+    font-size:15px;
+}
+
+.hero-btn,
+.btn{
+    width:100%;
+    font-size:15px;
+    padding:13px 20px;
+}
+
+.gallery{
+    grid-template-columns:1fr;
+}
+
+.gallery img{
+    height:220px;
+}
+
+.section-title{
+    font-size:26px;
+}
+
+}
+
+/* Materi */
+.materi a{
+    text-align:center;
+    padding:18px;
+    font-size:15px;
+}
+
+/* Musik */
+.music{
+    top:8px;
+    right:8px;
+    padding:4px;
+    border-radius:10px;
+}
+
+.music audio{
+    width:120px;
+    height:28px;
+}
+
+/* Logo */
+.logo-dkp img{
+    width:180px;
+}
+
+footer{
+    padding:20px;
+    font-size:14px;
+}
+
+
+/* ===========================
+   BACKGROUND PLANET SATURNUS
+=========================== */
+
+body{
+    position:relative;
+    overflow-x:hidden;
+}
+
+/* Container */
+.saturn-bg{
+    position:fixed;
+    top:50%;
+    right:-180px;
+    width:700px;
+    height:700px;
+    transform:translateY(-50%);
+    z-index:-5;
+    pointer-events:none;
+    animation:saturnFloat 8s ease-in-out infinite;
+}
+
+/* Planet */
+.saturn-planet{
+    position:absolute;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    top:140px;
+    left:140px;
+
+    background:
+    radial-gradient(circle at 30% 25%,
+    #fff6d5 0%,
+    #f7d59b 15%,
+    #d8a05e 35%,
+    #c68848 55%,
+    #9d6030 75%,
+    #6d4324 100%);
+
+    box-shadow:
+    0 0 80px rgba(255,200,120,.7),
+    inset -30px -40px 80px rgba(0,0,0,.45),
+    inset 30px 20px 60px rgba(255,255,255,.2);
+
+    animation:planetRotate 25s linear infinite;
+}
+
+/* Garis-garis Saturnus */
+.saturn-planet::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    background:
+    repeating-linear-gradient(
+    8deg,
+    rgba(255,255,255,.08) 0px,
+    rgba(255,255,255,.08) 4px,
+    transparent 5px,
+    transparent 16px
+    );
+    mix-blend-mode:overlay;
+}
+
+/* Cincin Saturnus */
+.saturn-ring{
+    position:absolute;
+    width:620px;
+    height:180px;
+    top:260px;
+    left:40px;
+    border-radius:50%;
+    border:18px solid rgba(238,215,170,.9);
+
+    transform:rotate(-18deg);
+
+    box-shadow:
+    0 0 30px rgba(255,255,255,.3),
+    inset 0 0 20px rgba(255,255,255,.4);
+
+    background:
+    repeating-radial-gradient(circle,
+    rgba(255,255,255,.05) 0px,
+    rgba(255,255,255,.15) 3px,
+    transparent 5px,
+    transparent 10px);
+
+    animation:ringRotate 40s linear infinite;
+}
+
+/* Animasi */
+@keyframes saturnFloat{
+    0%,100%{
+        transform:translateY(-50%) translateX(0px);
+    }
+    50%{
+        transform:translateY(-53%) translateX(-20px);
+    }
+}
+
+@keyframes planetRotate{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes ringRotate{
+    from{
+        transform:rotate(-18deg);
+    }
+    to{
+        transform:rotate(342deg);
+    }
+}
+
+/* HP */
+@media(max-width:768px){
+
+.saturn-bg{
+    width:420px;
+    height:420px;
+    right:-150px;
+    opacity:.4;
+}
+
+.saturn-planet{
+    width:240px;
+    height:240px;
+    top:90px;
+    left:90px;
+}
+
+.saturn-ring{
+    width:360px;
+    height:110px;
+    top:160px;
+    left:25px;
+    border-width:12px;
+}
+/* ================= QUOTES ================= */
+
+
+.quotes-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px 20px;
+}
+
+.quotes-box{
+    width:100%;
+    max-width:1000px;
+    height:420px;          /* Tinggi tetap */
+    overflow:hidden;       /* Jangan membesar */
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 0 25px rgba(255,215,0,.25);
+
+    /* HAPUS transition dan transform */
+    transition:none;
+}
+
+.quotes-box:hover{
+    transform:none;
+    box-shadow:0 0 25px rgba(255,215,0,.25);
+}
+
+.quote-icon{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+#typingQuote{
+    height:220px;          /* Tinggi teks tetap */
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    font-size:34px;
+    font-weight:700;
+    color:#fff;
+    line-height:1.5;
+}
+/* ================= PEMBATAS ================= */
+.section-divider{
+    width:90%;
+    max-width:1200px;
+    height:4px;
+    margin:70px auto;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        #FFD700,
+        #ffffff,
+        #FFD700,
+        transparent
+    );
+
+    border-radius:50px;
+
+    box-shadow:
+        0 0 10px #FFD700,
+        0 0 20px #FFD700,
+        0 0 40px rgba(255,215,0,.7);
+}
+
+/* ================= MOTIVASI ================= */
+
+.motivation-section{
+    padding:30px 20px 70px;
+    text-align:center;
+}
+
+.motivation-title{
+    font-size:48px;
+    font-weight:900;
+    color:#FFD700;
+    margin-bottom:40px;
+
+    text-shadow:
+        0 0 10px gold,
+        0 0 25px orange;
+}
+
+.motivation-box{
+    max-width:1000px;
+    margin:auto;
+    padding:35px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    color:#fff;
+
+    font-size:28px;
+    line-height:2;
+}
+.agreement-section{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.agreement-title{
+    font-size:55px;
+    color:#FFD700;
+    font-weight:900;
+    margin-bottom:25px;
+    text-shadow:0 0 15px gold;
+}
+
+.agreement-text{
+    max-width:900px;
+    margin:auto;
+    color:#fff;
+    font-size:24px;
+    line-height:1.8;
+}
+
+.agree-btn{
+
+    margin-top:40px;
+
+    padding:18px 60px;
+
+    font-size:28px;
+    font-weight:900;
+
+    border:none;
+    border-radius:60px;
+
+    cursor:pointer;
+
+    color:#000;
+    background:linear-gradient(45deg,#FFD700,#FFA500);
+
+    transition:.3s;
+}
+
+.agree-btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 30px gold;
+}
+
+#confetti{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+}
+.btn-group{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.agree-btn,
+.back-btn{
+    padding:18px 45px;
+    font-size:24px;
+    font-weight:800;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.agree-btn{
+    background:linear-gradient(45deg,#FFD700,#FFA500);
+    color:#000;
+}
+
+.agree-btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 25px gold;
+}
+
+.back-btn{
+    background:#34495e;
+    color:#fff;
+}
+
+.back-btn:hover{
+    background:#2c3e50;
+    transform:scale(1.08);
+}
+}
+</style>
+</head>
+<body>
+    <div class="saturn-bg">
+    <div class="saturn-ring"></div>
+    <div class="saturn-planet"></div>
+</div>
+
+
+<!-- MUSIK -->
+<div class="music">
+<audio controls autoplay loop>
+<source src="musik.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+<div class="hero-content">
+<h1>HALLO</h1>
+<h2>PEGASUS UNICORN</h2>
+<p>
+Selamat bergabung, Calon Pengurus Pramuka! Hari ini adalah awal dari perjalanan untuk belajar memimpin, bekerja sama, dan mengabdi. Jadilah pribadi yang disiplin, bertanggung jawab, berintegritas, serta mampu menjadi teladan bagi sesama. Bersama, mari membangun organisasi Pramuka yang aktif, kreatif, berkarakter, dan penuh semangat dalam berkarya dan berpikir maju.
+</p>
+
+<a href="#pembina" class="btn">Profil Pembina</a>
+<a href="#anggota" class="btn">Anggota DKP</a>
+<a href="#materi" class="btn">Materi Pramuka</a>
+<a href="#outpit" class="btn">Outfit</a>
+<a href="#format" class="btn">Format</a>
+
+</div>
+</header>
+
+<!-- ================= QUOTES INTERAKTIF ================= -->
+<section class="quotes-section">
+    <div class="quotes-box">
+        <span class="quote-icon"> </span>
+        <h2 id="typingQuote"></h2>
+    </div>
+</section>
+
+<!-- ================= PEMBATAS ================= -->
+<div class="section-divider"></div>
+
+<!-- ================= PERSETUJUAN ================= -->
+<div class="section-divider"></div>
+
+<section class="agreement-section">
+
+ <h2 class="agreement-title">
+📜 PERHATIAN
+</h2>
+
+<p class="agreement-text">
+ <p class="agreement-text">
+    <b>Penggalang Rakit</b> merupakan bagian dari proses kaderisasi untuk mempersiapkan calon anggota jika ingin melanjutkan dalam perjuangan bersama dipramuka <b>Dewan Penggalang</b>. Oleh karena itu, saya berkomitmen untuk mengikuti seluruh rangkaian pembinaan dengan sungguh-sungguh agar memiliki pengetahuan, keterampilan, jiwa kepemimpinan, serta kesiapan yang matang dalam mengemban tugas dan tanggung jawab sebagai pengurus di masa mendatang.
+    <br><br>
+
+    Apabila saya menyetujui pernyataan ini, saya menyatakan siap mengikuti seluruh proses kaderisasi <b>Penggalang Rakit</b> dengan disiplin, bertanggung jawab, menjaga nama baik gugus depan, mematuhi peraturan yang berlaku, serta bersedia menerima segala konsekuensi atas setiap keputusan yang saya ambil.
+</p> <br>
+
+<b>Silakan pilih salah satu tombol di bawah ini.</b>
+</p>
+
+   <div class="btn-group">
+
+    <button id="agreeBtn" class="agree-btn">
+        ✅ SAYA SETUJU
+    </button>
+
+    <button id="backBtn" class="back-btn">
+        🔙 SAYA MASIH RAGU
+    </button>
+
+</div>
+    </button>
+
+    <canvas id="confetti"></canvas>
+
+</section>
+<nav>
+    <a href="#pembina">Pembina</a>
+    <a href="#pratama">Pratama</a>
+    <a href="#anggota">Anggota</a>
+    <a href="#materi">Materi</a>
+    <a href="#outpit">Outfit</a>
+    <a href="#format">Format</a>
+</nav>
+<!-- PEMBINA -->
+<section id="pembina">
+
+<h2 class="title">Profil Pembina</h2>
+
+<div class="cards">
+
+    <!-- Ketua Gugus Depan -->
+    <div class="card">
+        <img src="pembina.jpeg" alt="Ketua Gugus Depan">
+        <h3>DEDI KUSBANDI M.G</h3>
+        <p><strong>Ketua Gugus Depan</strong></p>
+        <p>Gudep 13.027 - 13.028</p>
+        <p>SMP Negeri 1 Sindang</p>
+    </div>
+
+    <!-- Pembina Putra -->
+    <div class="card">
+        <img src="EKA.jpeg" alt="Pembina Putra">
+        <h3>EKA AMIN HIDAYAT</h3>
+        <p><strong>Pembina Pramuka Putra</strong></p>
+        <p>Gudep 13.027</p>
+        <p>SMP Negeri 1 Sindang</p>
+    </div>
+
+    <!-- Pembina Putri -->
+    <div class="card">
+        <img src="SANTI.jpeg" alt="Pembina Putri">
+        <h3>SANTI ROSMALASARI</h3>
+        <p><strong>Pembina Pramuka Putri</strong></p>
+        <p>Gudep 13.028</p>
+        <p>SMP Negeri 1 Sindang</p>
+    </div>
+
+</div>
+
+</section>
+
+
+</div>
+</div>
+
+</section>
+
+<!-- PRATAMA -->
+<section id="pratama">
+
+<h2 class="title">Pratama Gugus Depan</h2>
+
+<div class="pratama">
+
+<div class="pratama-card">
+<img src="pembina.jpeg" alt="Pratama Putra">
+
+<h3>Pratama Putra</h3>
+
+<p><strong>Nama :</strong> ................................</p>
+
+<p><strong>Kelas :</strong> VIII</p>
+
+<p>
+Pemimpin Regu Putra yang bertugas menjadi teladan,
+mengkoordinasikan anggota putra serta memimpin kegiatan
+kepramukaan di Gugus Depan.
+</p>
+
+</div>
+
+<div class="pratama-card">
+<img src="pembina.jpeg" alt="Pratama Putri">
+
+<h3>Pratama Putri</h3>
+
+<p><strong>Nama :</strong> ................................</p>
+
+<p><strong>Kelas :</strong> VIII</p>
+
+<p>
+Pemimpin Regu Putri yang bertugas menjadi teladan,
+mengkoordinasikan anggota putri serta membantu kelancaran
+seluruh kegiatan Pramuka di Gugus Depan.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================== PUTRA ===================== -->
+<h2 class="title">9 Anggota DKP Putra</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="pembina.jpeg" alt="Anggota A">
+<h3>Nama Anggota A</h3>
+<p>Anggota DKP</p>
+<p>Kelas VIII</p>
+</div>
+
+<div class="card">
+<img src="pembina.jpeg" alt="Anggota B">
+<h3>Nama Anggota B</h3>
+<p>Anggota DKP</p>
+<p>Kelas VIII</p>
+</div>
+
+<div class="card">
+<img src="pembina.jpeg" alt="Anggota C">
+<h3>Nama Anggota C</h3>
+<p>Anggota DKP</p>
+<p>Kelas VIII</p>
+</div>
+
+<div class="card">
+<img src="pembina.jpeg" alt="Anggota D">
+<h3>Nama Anggota D</h3>
+<p>Anggota DKP</p>
+<p>Kelas VIII</p>
+</div>
+
+<div class="card">
+<img src="pembina.jpeg" alt="Anggota E">
+<h3>Nama Anggota E</h3>
+<p>Anggota DKP</p>
+<p>Kelas VIII</p>
+</div>
+
+<div class="card">
+<img src="pembina.jpeg" alt="Anggota F">
+<h3>Nama Anggota F</h3>
+<p>Anggota DKP</p>
+<p>Kelas VIII</p>
+</div>
+
+<div class="card">
+<img src="pembina.jpeg" alt="Anggota G">
+<h3>Nama Anggota G</h3>
+<p>Anggota DKP</p>
+<p>Kelas VIII</p>
+</div>
+
+<div class="card">
+<img src="pembina.jpeg" alt="Anggota H">
+<h3>Nama Anggota H</h3>
+<p>Anggota DKP</p>
+<p>Kelas VIII</p>
+</div>
+
+<div class="card">
+<img src="pembina.jpeg" alt="Anggota I">
+<h3>Nama Anggota I</h3>
+<p>Anggota DKP</p>
+<p>Kelas VIII</p>
+</div>
+
+
+</div>
+
+<!-- ===== PEMBATAS ===== -->
+<div style="margin:80px 0;border-top:4px dashed #0d47a1;"></div>
+
+<!-- ===================== PUTRI ===================== -->
+<h2 class="title">9 Anggota DKP Putri</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="pembina.jpeg" alt="Anggota K">
+<h3>Nama Anggota K</h3>
+<p>Anggota DKP</p>
+<p>Kelas VIII</p>
+</div>
+
+<div class="card">
+<img src="pembina.jpeg" alt="Anggota L">
+<h3>Nama Anggota L</h3>
+<p>Anggota DKP</p>
+<p>Kelas VIII</p>
+</div>
+
+<div class="card">
+<img src="pembina.jpeg" alt="Anggota M">
+<h3>Nama Anggota M</h3>
+<p>Anggota DKP</p>
+<p>Kelas VIII</p>
+</div>
+
+<div class="card">
+<img src="pembina.jpeg" alt="Anggota N">
+<h3>Nama Anggota N</h3>
+<p>Anggota DKP</p>
+<p>Kelas VIII</p>
+</div>
+
+<div class="card">
+<img src="pembina.jpeg" alt="Anggota O">
+<h3>Nama Anggota O</h3>
+<p>Anggota DKP</p>
+<p>Kelas VIII</p>
+</div>
+
+<div class="card">
+<img src="pembina.jpeg" alt="Anggota P">
+<h3>Nama Anggota P</h3>
+<p>Anggota DKP</p>
+<p>Kelas VIII</p>
+</div>
+
+<div class="card">
+<img src="pembina.jpeg" alt="Anggota Q">
+<h3>Nama Anggota Q</h3>
+<p>Anggota DKP</p>
+<p>Kelas VIII</p>
+</div>
+
+<div class="card">
+<img src="pembina.jpeg" alt="Anggota R">
+<h3>Nama Anggota R</h3>
+<p>Anggota DKP</p>
+<p>Kelas VIII</p>
+</div>
+
+<div class="card">
+<img src="pembina.jpeg" alt="Anggota S">
+<h3>Nama Anggota S</h3>
+<p>Anggota DKP</p>
+<p>Kelas VIII</p>
+</div>
+
+
+
+</div>
+
+<!-- MATERI -->
+<section id="materi">
+<h2 class="title">Materi Kepramukaan</h2>
+
+<div class="materi">
+
+<a href="https://nesasinkuberaksi-source.github.io/azimut/">NAVIGASI</a>
+
+
+
+<a href="https://nesasinkuberaksi-source.github.io/PENGERTIANKOMPAS/">KOMPAS</a>
+
+
+
+</div>
+</section>
+<!-- ================= GALERI ================= -->
+<<section id="outpit">
+
+<h2 class="title">👕 Outfit Anggota DKP</h2>
+
+<div class="gallery">
+
+    <div class="gallery-item">
+        <img src="FOTO PDL.jpeg" alt="PDL">
+        <div class="gallery-info">
+            <h3>PAKAIAN DINAS LAPANGAN (PDL)</h3>
+            <p>Digunakan saat kegiatan lapangan dan kepanitiaan.</p>
+        </div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="FOTO LATIHAN.jpeg" alt="Latihan">
+        <div class="gallery-info">
+            <h3>PAKAIAN LATIHAN</h3>
+            <p>Digunakan saat latihan rutin Pramuka.</p>
+        </div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="FORMAL.jpeg" alt="Formal">
+        <div class="gallery-info">
+            <h3>PAKAIAN FORMAL</h3>
+            <p>Digunakan pada kegiatan resmi dan acara formal.</p>
+        </div>
+    </div>
+
+</div>
+
+</div>
+</section>
+
+<section id="format">
+
+<h2 class="title">📄ADMINISTRASI</h2>
+
+<div class="materi">
+
+    <a href="FORMAT GARUDA.docx" download>
+        📥 Download Berkas Pramuka Garuda 2027 (Word)
+    </a>
+
+    <a href="https://forms.gle/emFv9dvYxJ6Q1oNz5"
+       target="_blank"
+       rel="noopener noreferrer">
+        📝 Pendaftaran 
+    </a>
+
+</div>
+</div>
+
+</section>
+
+</section>
+
+        </div>
+
+    </div>
+</section>
+
+<footer>
+<h3>DKP 2027</h3>
+<p>Pangkalan SMP Negeri 1 Sindang</p>
+<p>AYO KWARNAS SISTEM</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+
+<div id="space-bg"></div>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+// =====================
+// SCENE
+// =====================
+const scene = new THREE.Scene();
+
+const camera = new THREE.PerspectiveCamera(
+60,
+window.innerWidth / window.innerHeight,
+0.1,
+1000
+);
+
+const renderer = new THREE.WebGLRenderer({
+alpha:true,
+antialias:true
+});
+
+renderer.setSize(window.innerWidth,window.innerHeight);
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.shadowMap.enabled=true;
+
+document.getElementById("space-bg").appendChild(renderer.domElement);
+
+// =====================
+// TEXTURE LOADER
+// =====================
+const loader = new THREE.TextureLoader();
+
+// =====================
+// STAR BACKGROUND
+// =====================
+const stars = [];
+
+const starGeometry = new THREE.SphereGeometry(0.08,8,8);
+const starMaterial = new THREE.MeshBasicMaterial({
+color:0xffffff
+});
+
+for(let i=0;i<2500;i++){
+
+    const star = new THREE.Mesh(starGeometry,starMaterial);
+
+    star.position.set(
+        (Math.random()-0.5)*500,
+        (Math.random()-0.5)*500,
+        (Math.random()-0.5)*500
+    );
+
+    scene.add(star);
+    stars.push(star);
+
+}
+
+// =====================
+// SATURN
+// =====================
+const saturnTexture = loader.load(
+"https://threejs.org/examples/textures/planets/saturn.jpg"
+);
+
+const planet = new THREE.Mesh(
+
+new THREE.SphereGeometry(5,128,128),
+
+new THREE.MeshStandardMaterial({
+
+map:saturnTexture,
+roughness:1,
+metalness:0
+
+})
+
+);
+
+planet.castShadow=true;
+planet.receiveShadow=true;
+
+scene.add(planet);
+
+// =====================
+// SATURN RING
+// =====================
+const ringTexture = loader.load(
+"https://threejs.org/examples/textures/planets/saturnringcolor.jpg"
+);
+
+const ring = new THREE.Mesh(
+
+new THREE.RingGeometry(6.5,10,256),
+
+new THREE.MeshStandardMaterial({
+
+map:ringTexture,
+side:THREE.DoubleSide,
+transparent:true,
+opacity:0.95
+
+})
+
+);
+
+ring.rotation.x=Math.PI/2.3;
+ring.castShadow=true;
+ring.receiveShadow=true;
+
+scene.add(ring);
+
+// =====================
+// LIGHT
+// =====================
+scene.add(new THREE.AmbientLight(0xffffff,1));
+
+const sun = new THREE.DirectionalLight(0xffffff,4);
+
+sun.position.set(30,20,20);
+
+sun.castShadow=true;
+
+scene.add(sun);
+
+// =====================
+// CAMERA
+// =====================
+camera.position.set(0,2,18);
+
+// =====================
+// ORBIT CONTROLS
+// =====================
+const controls = new THREE.OrbitControls(
+camera,
+renderer.domElement
+);
+
+controls.enableDamping=true;
+controls.enableZoom=true;
+controls.autoRotate=false;
+
+// =====================
+// MOUSE PARALLAX
+// =====================
+let mouseX=0;
+let mouseY=0;
+
+document.addEventListener("mousemove",(e)=>{
+
+mouseX=(e.clientX-window.innerWidth/2)*0.0005;
+mouseY=(e.clientY-window.innerHeight/2)*0.0005;
+
+});
+
+// =====================
+// ANIMATION
+// =====================
+function animate(){
+
+requestAnimationFrame(animate);
+
+planet.rotation.y+=0.0025;
+
+ring.rotation.z+=0.0008;
+
+scene.rotation.y+=
+(mouseX-scene.rotation.y)*0.03;
+
+scene.rotation.x+=
+(mouseY-scene.rotation.x)*0.03;
+
+controls.update();
+
+renderer.render(scene,camera);
+
+}
+
+animate();
+
+// =====================
+// RESPONSIVE
+// =====================
+window.addEventListener("resize",()=>{
+
+camera.aspect=window.innerWidth/window.innerHeight;
+
+camera.updateProjectionMatrix();
+
+renderer.setSize(
+window.innerWidth,
+window.innerHeight
+);
+
+});
+
+</script>
+
+
+<script>
+
+
+const quotes = [
+"Selamat datang, Leader. Jika ingin disukai semua orang, berdaganglah es krim. Jika ingin membawa perubahan, jadilah pemimpin.",
+"SETIA SIAP SEDIA.",
+"Di organisasi, kamu belajar mendapatkan pengalaman, kemampuan, dan nilai-nilai yang sebelumnya belum kamu miliki.",
+"Satu langkah kecil hari ini menjadi perubahan besar di masa depan.",
+"Satya Ku Kudarmakan, Dharma Ku Kubaktikan."
+];
+
+const text = document.getElementById("typingQuote");
+
+let q = 0;
+let c = 0;
+
+function type(){
+
+    if(c < quotes[q].length){
+
+        text.innerHTML += quotes[q].charAt(c);
+        c++;
+        setTimeout(type,45);
+
+    }else{
+
+        // Tunggu 4 detik lalu ganti ke quote berikutnya
+        setTimeout(nextQuote,4000);
+
+    }
+
+}
+
+function nextQuote(){
+
+    q = (q + 1) % quotes.length;
+    c = 0;
+    text.innerHTML = "";
+    type();
+
+}
+
+type();
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script>
+document.getElementById("agreeBtn").addEventListener("click",()=>{
+
+    confetti({
+        particleCount:250,
+        spread:180,
+        origin:{y:.6}
+    });
+
+    setTimeout(()=>{
+        alert("🎉 Selamat!\nAnda telah menyatakan siap menjadi Calon Pengurus Pramuka.");
+    },300);
+
+});
+
+document.getElementById("backBtn").addEventListener("click", function () {
+
+    if (confirm("Apakah Anda yakin ingin keluar dari website?")) {
+        window.close();
+    }
+
+});
+
+</script>
+</body>
+</html>
